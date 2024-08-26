@@ -39,22 +39,26 @@ public class Board {
 	/** Return true if the current player "thePlayer" has won after making their move  */
 	public boolean hasWon(Player thePlayer, int playerRow, int playerCol) {
 		 // check if player has 3-in-that-row
-		if(cells[playerRow][0].content == thePlayer && cells[playerRow][1].content == thePlayer && cells[playerRow][2].content == thePlayer )
+		if(cells[playerRow][0].content == thePlayer && cells[playerRow][1].content == thePlayer && cells[playerRow][2].content == thePlayer ) {
 			return true; 
+		}
 		
 		// check if player has 3 in the column
-		if(cells[playerCol][0].content == thePlayer && cells[playerCol][1].content == thePlayer && cells[playerCol][2].content == thePlayer )
+		if(cells[0][playerCol].content == thePlayer && cells[1][playerCol].content == thePlayer && cells[2][playerCol].content == thePlayer ) {
 			return true;
+		}
 		
 		
 		
 		 // 3-in-the-diagonal
-		if( cells[0][0].content == thePlayer && cells[1][1].content == thePlayer && cells[2][2].content == thePlayer)
+		if( cells[0][0].content == thePlayer && cells[1][1].content == thePlayer && cells[2][2].content == thePlayer) {
 			return true;
+		}
 		 
 		// 3 in diagonal other direction
-		if(cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells [2][0].content == thePlayer)
-		return true;
+		if(cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells [2][0].content == thePlayer) {
+			return true;
+		}
 		
 
 		
